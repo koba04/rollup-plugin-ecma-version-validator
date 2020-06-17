@@ -1,0 +1,54 @@
+{
+  "name": "rollup-plugin-ecma-version-validator",
+  "version": "0.1.0",
+  "description": "A rollup plugin to verify ECMAScript version for bundle files",
+  "engines": {
+    "node": ">=10"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "clean": "rimraf lib",
+    "lint": "eslint 'src/**/*.ts'",
+    "release": "standard-version",
+    "prerelease": "npm run lint && npm test && npm run build",
+    "start": "tsc -w",
+    "test": "jest"
+  },
+  "keywords": [
+    "rollup",
+    "rollup-plugin",
+    "ecma"
+  ],
+  "author": "koba04",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koba04/rollup-plugin-ecma-version-validator.git"
+  },
+  "homepage": "https://github.com/koba04/rollup-plugin-ecma-version-validator",
+  "bugs": "https://github.com/koba04/rollup-plugin-ecma-version-validator-webpack-plugin/issues",
+  "dependencies": {
+    "acorn": "^7.3.1"
+  },
+  "peerDependencies": {
+    "rollup": "^2.16.1"
+  },
+  "devDependencies": {
+    "@cybozu/eslint-config": "^10.0.4",
+    "@types/acorn": "^4.0.5",
+    "@types/jest": "^26.0.0",
+    "eslint": "^7.2.0",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.16.1",
+    "standard-version": "^8.0.0",
+    "ts-jest": "^26.1.0",
+    "typescript": "^3.9.5"
+  }
+}
