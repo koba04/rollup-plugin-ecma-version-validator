@@ -1,4 +1,4 @@
-# ecma-version-validator-webpack-plugin
+# rollup-plugin-ecma-version-validator
 [![npm version](https://badge.fury.io/js/rollup-plugin-ecma-version-validator.svg)](https://badge.fury.io/js/rollup-plugin-ecma-version-validator)
 [![](https://github.com/koba04/rollup-plugin-ecma-version-validator/workflows/test/badge.svg)](https://github.com/koba04/rollup-plugin-ecma-version-validator/actions?workflow=test)
 [![](https://github.com/koba04/rollup-plugin-ecma-version-validator/workflows/lint/badge.svg)](https://github.com/koba04/rollup-plugin-ecma-version-validator/actions?workflow=lint)

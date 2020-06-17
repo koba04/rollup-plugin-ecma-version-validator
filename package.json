@@ -31,7 +31,7 @@
     "url": "https://github.com/koba04/rollup-plugin-ecma-version-validator.git"
   },
   "homepage": "https://github.com/koba04/rollup-plugin-ecma-version-validator",
-  "bugs": "https://github.com/koba04/rollup-plugin-ecma-version-validator-webpack-plugin/issues",
+  "bugs": "https://github.com/koba04/rollup-plugin-ecma-version-validator/issues",
   "dependencies": {
     "acorn": "^7.3.1"
   },
