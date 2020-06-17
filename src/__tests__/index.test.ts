@@ -1,24 +1,24 @@
 import path from "path";
-import * as rollup from "rollup";
-import ecmaVersionValidatorPlugin from "../index";
+import { rollup } from "rollup";
+import { ecmaVersionValidator } from "../index";
 
 describe("index", () => {
   it("should not emit any error if an input file is valid", async () => {
     const inputOptions = {
       input: path.resolve(__dirname, "fixtures", "es5.js"),
-      plugins: [ecmaVersionValidatorPlugin()],
+      plugins: [ecmaVersionValidator()],
     };
     const outputOptions = {};
-    const bundle = await rollup.rollup(inputOptions);
+    const bundle = await rollup(inputOptions);
     await expect(bundle.generate(outputOptions)).resolves.not.toThrow();
   });
   it("should emit an error if an input file is not valid", async () => {
     const inputOptions = {
       input: path.resolve(__dirname, "fixtures", "es2015.js"),
-      plugins: [ecmaVersionValidatorPlugin()],
+      plugins: [ecmaVersionValidator()],
     };
     const outputOptions = {};
-    const bundle = await rollup.rollup(inputOptions);
+    const bundle = await rollup(inputOptions);
 
     await expect(bundle.generate(outputOptions)).rejects.toThrow(
       "The keyword 'const' is reserved (1:0)\n[1:0] const foo = (a, b) => {"
@@ -27,10 +27,10 @@ describe("index", () => {
   it("should be able to change the target ECMAScript version", async () => {
     const inputOptions = {
       input: path.resolve(__dirname, "fixtures", "es2015.js"),
-      plugins: [ecmaVersionValidatorPlugin({ ecmaVersion: 2015 })],
+      plugins: [ecmaVersionValidator({ ecmaVersion: 2015 })],
     };
     const outputOptions = {};
-    const bundle = await rollup.rollup(inputOptions);
+    const bundle = await rollup(inputOptions);
     expect(bundle.generate(outputOptions)).resolves.not.toThrow();
   });
 });

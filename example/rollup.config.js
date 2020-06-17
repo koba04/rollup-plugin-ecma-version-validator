@@ -1,4 +1,4 @@
-import ecmaVersionValidator from "../lib/index";
+const { ecmaVersionValidator } = require("../lib/");
 
 export default {
   input: "index.js",

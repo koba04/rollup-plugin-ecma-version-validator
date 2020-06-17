@@ -7,7 +7,7 @@ type Options = {
   ecmaVersion?: ECMAVersion;
 };
 
-export default function ecmaVersionValidator(options: Options = {}): Plugin {
+export const ecmaVersionValidator = (options: Options = {}): Plugin => {
   return {
     name: "EcmaVersionValidator",
     generateBundle(_, bundle /* isWrite */) {
@@ -25,4 +25,4 @@ export default function ecmaVersionValidator(options: Options = {}): Plugin {
       });
     },
   };
-}
+};

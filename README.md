@@ -20,7 +20,7 @@ Add a `ECMAVersionValidatorPlugin` instance into a `plugins` field in `rollup.co
 - `rollup.config.js`
 
 ```js
-import ecmaVersionValidator from "../lib/index";
+import { ecmaVersionValidator } from "rollup-plugin-ecma-version-validator";
 
 export default {
   input: "index.js",
