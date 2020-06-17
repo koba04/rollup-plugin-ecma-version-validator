@@ -6,17 +6,19 @@
     "node": ">=10"
   },
   "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "types": "types/index.d.ts",
   "files": [
     "lib"
   ],
   "scripts": {
     "prebuild": "npm run clean",
-    "build": "tsc",
+    "build": "rollup -c",
     "clean": "rimraf lib",
     "lint": "eslint 'src/**/*.ts'",
     "release": "standard-version",
     "prerelease": "npm run lint && npm test && npm run build",
-    "start": "tsc -w",
+    "start": "rollup -c --watch",
     "test": "jest"
   },
   "keywords": [
@@ -40,6 +42,7 @@
   },
   "devDependencies": {
     "@cybozu/eslint-config": "^10.0.4",
+    "@rollup/plugin-typescript": "^4.1.2",
     "@types/acorn": "^4.0.5",
     "@types/jest": "^26.0.0",
     "eslint": "^7.2.0",
