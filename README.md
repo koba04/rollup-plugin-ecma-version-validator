@@ -10,7 +10,7 @@ This plugin is intended to verify that bundle files don't include unsupported sy
 ## Install
 
 ```
-% npm install --save-dev rollup-ecma-version-validator
+% npm install --save-dev rollup-plugin-ecma-version-validator
 ```
 
 ## How to use
