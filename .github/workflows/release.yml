@@ -10,3 +10,20 @@ jobs:
       - uses: google-github-actions/release-please-action@v3
         with:
           release-type: node
+  publish:
+    needs: release-please
+    runs-on: ubuntu-latest
+    if: ${{ needs.release-please.outputs.release_created }}
+    steps:
+      # The logic below handles the npm publication:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+      - run: |
+          npm ci
+          npm run prerelease
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
