@@ -14,7 +14,6 @@
     "build": "tsc",
     "clean": "rimraf lib",
     "lint": "eslint 'src/**/*.ts'",
-    "release": "npm publish",
     "prerelease": "npm run lint && npm test && npm run build",
     "start": "tsc -w",
     "test": "jest"
