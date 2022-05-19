@@ -14,7 +14,7 @@
     "build": "tsc",
     "clean": "rimraf lib",
     "lint": "eslint 'src/**/*.ts'",
-    "release": "standard-version",
+    "release": "npm publish",
     "prerelease": "npm run lint && npm test && npm run build",
     "start": "tsc -w",
     "test": "jest"
@@ -47,7 +47,6 @@
     "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.74.0",
-    "standard-version": "^8.0.0",
     "ts-jest": "^28.0.2",
     "typescript": "^4.6.4"
   }
