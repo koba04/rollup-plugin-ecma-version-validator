@@ -16,7 +16,7 @@ export const ecmaVersionValidator = (options: Options = {}): Plugin => {
         const asset = bundle[name];
         const source =
           asset.type === "asset" ? asset.source.toString() : asset.code;
-        const fileName = asset.fileName;
+        // const fileName = asset.fileName;
         try {
           parse(source, { ecmaVersion });
         } catch (e: any) {
