@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-ecma-version-validator",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "A rollup plugin to verify ECMAScript version for bundle files",
   "engines": {
     "node": ">=14"
