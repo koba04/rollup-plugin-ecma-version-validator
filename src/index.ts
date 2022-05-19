@@ -19,7 +19,7 @@ export const ecmaVersionValidator = (options: Options = {}): Plugin => {
         const fileName = asset.fileName;
         try {
           parse(source, { ecmaVersion });
-        } catch (e) {
+        } catch (e: any) {
           this.error(format(e, source));
         }
       });
