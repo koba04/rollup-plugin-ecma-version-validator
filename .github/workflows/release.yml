@@ -13,7 +13,7 @@ jobs:
   publish:
     needs: release-please
     runs-on: ubuntu-latest
-    # if: ${{ needs.release-please.outputs.releases_created }}
+    if: ${{ needs.release-please.outputs.releases_created }}
     steps:
       # The logic below handles the npm publication:
       - uses: actions/checkout@v3
