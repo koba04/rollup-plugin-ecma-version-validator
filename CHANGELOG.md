@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.5](https://github.com/koba04/rollup-plugin-ecma-version-validator/compare/v0.2.3...v0.2.5) (2022-05-19)
+
+
+### Miscellaneous Chores
+
+* release 0.2.4 ([2f19f83](https://github.com/koba04/rollup-plugin-ecma-version-validator/commit/2f19f83b744be685772af9a6be4fd0daf941bc6a))
+* release 0.2.5 ([7c52e43](https://github.com/koba04/rollup-plugin-ecma-version-validator/commit/7c52e43ce2bdbb220e2d03da550ca975fd481c39))
+
 ### [0.2.3](https://github.com/koba04/rollup-plugin-ecma-version-validator/compare/v0.2.2...v0.2.3) (2022-05-19)
 
 
