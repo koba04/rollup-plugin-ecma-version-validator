@@ -1,5 +1,3 @@
-import { RollupError } from "rollup";
-
 export const format = (
   error: { message: string; loc?: { line: number; column: number } },
   source: string
