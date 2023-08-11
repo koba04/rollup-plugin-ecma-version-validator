@@ -35,7 +35,7 @@
     "acorn": "^8.7.1"
   },
   "peerDependencies": {
-    "rollup": "^2.16.1"
+    "rollup": "^2.16.1 || ^3.x"
   },
   "devDependencies": {
     "@cybozu/eslint-config": "^17.0.1",
