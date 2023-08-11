@@ -31,6 +31,6 @@ describe("index", () => {
     };
     const outputOptions = {};
     const bundle = await rollup(inputOptions);
-    expect(bundle.generate(outputOptions)).resolves.not.toThrow();
+    await expect(bundle.generate(outputOptions)).resolves.not.toThrow();
   });
 });
